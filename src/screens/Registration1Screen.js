@@ -5,10 +5,6 @@ const Registration1Screen = ({ navigation }) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
 
-  // const handleContinue = () => {
-  //   navigation.navigate('Registration2', { fullName, email });
-  // };
-
   const handleContinue = async () => {
     if (fullName.trim() === '' || email.trim() === '') {
       Alert.alert('Validation Error', 'Both fields are required');
@@ -21,10 +17,6 @@ const Registration1Screen = ({ navigation }) => {
     }
 
     try {
-      // Save values to local storage
-      // await AsyncStorage.setItem('fullName', fullName);
-      // await AsyncStorage.setItem('email', email);
-
       // Navigate to the next page
       navigation.navigate('Registration2', { fullName, email });
     } catch (error) {
